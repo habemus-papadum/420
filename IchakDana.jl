@@ -22,9 +22,6 @@ begin
 end
 	
 
-# ╔═╡ f0c91f2d-8f64-4cad-89b1-6f2c74365d4f
-pwd()
-
 # ╔═╡ bda3607d-749c-4bc9-aee8-de02cc81bd96
 function LAB➜RGB(color)
     convert(RGB{Float64}, Lab(color[1:3]...))::RGB{Float64}
@@ -78,9 +75,6 @@ begin
 	
 end
 
-# ╔═╡ f84badfc-b516-45bc-b495-e0e91fb90e77
-[RGB(0.0,g/100.0,b/100.0) for b=99:-1:0, g=0:99]
-
 # ╔═╡ b55f864d-74c9-4ae6-8f72-8092469d3483
 begin 
 	stewart=[( 6, red   ) , 
@@ -91,7 +85,7 @@ begin
 	         ( 6, white ) ,
 	         (26, green ) ,
 	         (16, red   ) ,
-	         ( 2, black ) ,
+	         ( 2, red ) ,
 	         ( 2, red   ) ,
 	         ( 2, white ) ,]
 	
@@ -148,8 +142,10 @@ begin
 	end
 end
 
+# ╔═╡ f84badfc-b516-45bc-b495-e0e91fb90e77
+[RGB(0.0,g/100.0,b/100.0) for b=99:-1:0, g=0:99]
+
 # ╔═╡ Cell order:
-# ╠═f0c91f2d-8f64-4cad-89b1-6f2c74365d4f
 # ╠═d4aff600-a14a-4c8e-b82e-f0df5c1c6302
 # ╠═bef89303-1433-4b91-8ccb-fb61da42cbc7
 # ╠═bda3607d-749c-4bc9-aee8-de02cc81bd96
