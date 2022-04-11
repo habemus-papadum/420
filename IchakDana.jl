@@ -1,5 +1,5 @@
 ### A Pluto.jl notebook ###
-# v0.17.7
+# v0.19.0
 
 using Markdown
 using InteractiveUtils
@@ -145,6 +145,25 @@ end
 # ╔═╡ f84badfc-b516-45bc-b495-e0e91fb90e77
 [RGB(0.0,g/100.0,b/100.0) for b=99:-1:0, g=0:99]
 
+# ╔═╡ 51166cd4-831d-4a1d-9294-220dce71999b
+begin
+		
+	function herring(i,j)
+		n = 20
+		x = mod(i, n)
+		(x <  n/2) ? mod(i-j,4) < 2 : mod(i+j,4) < 2  
+		
+		#mod(x, 2) == 0
+	end
+	
+	@> herring begin          ## @> is a threading macro from Lazy    
+	   weave(simpleColors) 
+	   #(f) -> (i,j,w,h) -> f(floor(Int, i/3), floor(Int, j/3), w, h)	
+	   zoom(scale=15,radius=200) 
+	   createImage 
+	end
+end
+
 # ╔═╡ Cell order:
 # ╠═d4aff600-a14a-4c8e-b82e-f0df5c1c6302
 # ╠═bef89303-1433-4b91-8ccb-fb61da42cbc7
@@ -157,3 +176,4 @@ end
 # ╠═b55f864d-74c9-4ae6-8f72-8092469d3483
 # ╠═048bde34-6542-4e5a-998e-298248759568
 # ╠═f84badfc-b516-45bc-b495-e0e91fb90e77
+# ╠═51166cd4-831d-4a1d-9294-220dce71999b

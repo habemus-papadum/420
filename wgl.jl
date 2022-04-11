@@ -28,6 +28,7 @@ end
 @htl("""
 <script src="https://npmcdn.com/regl/dist/regl.min.js"></script>
 <script id="foo">
+	//# sourceURL=foo.js
     const node = this ?? document.createElement("div")
 
     if (this == null) {
