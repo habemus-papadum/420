@@ -1,0 +1,3 @@
+- Add library code to use in both notebook and pluto
+- threading syntax -- composition patterns -- weaving
+- modulo -- understand, simple vs twill vs herring bone
