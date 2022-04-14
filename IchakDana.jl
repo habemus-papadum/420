@@ -18,7 +18,7 @@ end
 begin
 	import Pkg
 	Pkg.activate(Base.current_project())
-	using Images, Colors, Lazy, PlutoUI
+	using Images, Colors, Lazy, PlutoUI, HypertextLiteral
 end
 	
 
@@ -146,7 +146,7 @@ end
 [RGB(0.0,g/100.0,b/100.0) for b=99:-1:0, g=0:99]
 
 # ╔═╡ 51166cd4-831d-4a1d-9294-220dce71999b
-begin
+f = begin
 		
 	function herring(i,j)
 		n = 20
@@ -164,6 +164,9 @@ begin
 	end
 end
 
+# ╔═╡ 7476507e-2e53-446e-9b34-0520c4e6efcf
+@htl("<div>$(display("text/html", f))</div>")
+
 # ╔═╡ Cell order:
 # ╠═d4aff600-a14a-4c8e-b82e-f0df5c1c6302
 # ╠═bef89303-1433-4b91-8ccb-fb61da42cbc7
@@ -177,3 +180,4 @@ end
 # ╠═048bde34-6542-4e5a-998e-298248759568
 # ╠═f84badfc-b516-45bc-b495-e0e91fb90e77
 # ╠═51166cd4-831d-4a1d-9294-220dce71999b
+# ╠═7476507e-2e53-446e-9b34-0520c4e6efcf
