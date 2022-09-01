@@ -1,3 +1,14 @@
-- Add library code to use in both notebook and pluto
+- julia
+  -- add edit
+  -- Use Revise.jl
+  -- vscode, 
+     -- space code?
+- cleanup
+  -- notebooks --- random cells
+  - dataurl function, other functions, 
+  - document setup, webio, IJulia installs (force)
+  - test out juia lab 
+  - pure webio interface - no Interact, vscode
+  - JSExpr
 - threading syntax -- composition patterns -- weaving
 - modulo -- understand, simple vs twill vs herring bone
